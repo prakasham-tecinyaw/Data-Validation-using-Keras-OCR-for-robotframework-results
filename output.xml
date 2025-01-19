@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.10.11 on win32)" generated="2025-01-19T14:46:53.845702" rpa="false" schemaversion="5">
+<suite id="s1" name="Ocr Validation Tests" source="C:\Users\sam\Desktop\project_demo\tests\ocr_validation_tests.robot">
+<test id="s1-t1" name="Capture Screenshots" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-19T14:46:54.018781" level="INFO">Opening browser 'Chrome' to base url 'https://example.com'.</msg>
+<arg>https://example.com</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-19T14:46:54.018781" elapsed="2.876357"/>
+</kw>
+<kw name="Capture Screenshot With Timestamp">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-01-19T14:46:56.896140" level="INFO">${timestamp} = 20250119_144656</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-01-19T14:46:56.896140" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-19T14:46:56.897141" level="INFO">${screenshot} = screenshot_20250119_144656.png</msg>
+<var>${screenshot}</var>
+<arg>screenshot_${timestamp}.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-19T14:46:56.896140" elapsed="0.001001"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-19T14:46:57.015713" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="data/screenshots/screenshot_20250119_144656.png"&gt;&lt;img src="data/screenshots/screenshot_20250119_144656.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${screenshot}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-19T14:46:56.897141" elapsed="0.118572"/>
+</kw>
+<doc>Capture a screenshot and save it with a timestamped filename</doc>
+<status status="PASS" start="2025-01-19T14:46:56.896140" elapsed="0.119573"/>
+</kw>
+<kw name="Capture Screenshot With Timestamp">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-01-19T14:46:57.016715" level="INFO">${timestamp} = 20250119_144657</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-01-19T14:46:57.016715" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-19T14:46:57.016715" level="INFO">${screenshot} = screenshot_20250119_144657.png</msg>
+<var>${screenshot}</var>
+<arg>screenshot_${timestamp}.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-19T14:46:57.016715" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-19T14:46:57.086405" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="data/screenshots/screenshot_20250119_144657.png"&gt;&lt;img src="data/screenshots/screenshot_20250119_144657.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${screenshot}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-19T14:46:57.016715" elapsed="0.069690"/>
+</kw>
+<doc>Capture a screenshot and save it with a timestamped filename</doc>
+<status status="PASS" start="2025-01-19T14:46:57.016715" elapsed="0.069690"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-19T14:46:57.086405" elapsed="2.079893"/>
+</kw>
+<doc>Capture screenshots at various steps of the UI testing</doc>
+<tag>Screenshot</tag>
+<status status="PASS" start="2025-01-19T14:46:54.017781" elapsed="5.148517"/>
+</test>
+<status status="PASS" start="2025-01-19T14:46:53.846704" elapsed="5.320595"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Screenshot</stat>
+</tag>
+<suite>
+<stat name="Ocr Validation Tests" id="s1" pass="1" fail="0" skip="0">Ocr Validation Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
