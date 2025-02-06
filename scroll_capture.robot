@@ -20,14 +20,13 @@ Zoom Page
     Execute JavaScript    document.body.style.zoom='${zoom_level}';
 
 Center Horizontal Scrollbar
-    # Calculate the scroll position based on the zoom level and page width
     ${scroll_position}=    Calculate Scroll Position
     Execute JavaScript    window.scrollTo(${scroll_position}, 0)
 
 Calculate Scroll Position
     ${viewport_width}=    Get Viewport Width
     ${document_width}=    Get Document Width
-    ${scroll_position}=    (${document_width} - ${viewport_width}) / 2
+    ${scroll_position}=    Evaluate    (${document_width} - ${viewport_width}) / 2
     [Return]    ${scroll_position}
 
 Get Viewport Width
