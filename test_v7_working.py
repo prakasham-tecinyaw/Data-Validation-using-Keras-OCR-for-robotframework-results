@@ -7,6 +7,7 @@ image = cv2.imread(image_path)
 
 # Initialize EasyOCR reader
 reader = easyocr.Reader(['en'])
+# reader = easyocr.Reader(['en'], detect_network = 'dbnet18')
 results = reader.readtext(image)
 
 # Define expected phrases to check for redrawing boxes
